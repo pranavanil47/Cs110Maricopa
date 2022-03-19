@@ -31,9 +31,9 @@ public class roster {
         System.out.println("q - Quit");
         System.out.println("");
         System.out.print("Choose an option:");
-        System.out.println("");
 
         userCommand = scnr.next();
+        System.out.println("");
         while (!userCommand.equals("q")){
             if ( userCommand.equals("u")) {
                 System.out.println("Enter a jersey number:");
@@ -48,6 +48,7 @@ public class roster {
                 }
             }
             if ( userCommand.equals("o")){
+                System.out.println("ROSTER");
                 for( i=0;i<5;i++) {
                     System.out.println("Player " + (i+1) + " -- Jersey number: " +jerseyArray[i]+ ", Rating: " + ratingArray[i]);
                 }
@@ -80,7 +81,14 @@ public class roster {
                 
             }
             
-            System.out.print("Choose an option:");
+            System.out.println("MENU");
+        
+            System.out.println("u - Update player rating");
+            System.out.println("a - Output players above a rating");
+            System.out.println("r - Replace player");
+            System.out.println("o - Output roster");
+            System.out.println("q - Quit");
+            System.out.println("");
             userCommand = scnr.next();            
         }
 
@@ -90,3 +98,6 @@ public class roster {
      }
     
 }
+
+
+
